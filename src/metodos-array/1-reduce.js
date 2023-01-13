@@ -9,10 +9,26 @@ const carrito = [
     // shift + alt + flecha hacia abajo
 ];
 // callback esta funcion que se pasa por parametro a otra función
-const resultadoReduce = carrito.reduce(function (total, product) {
-    return total + product.precio;
-}, 0);
+//* Con función tradicional
+//* const resultadoReduce = carrito.reduce(function(total: number, product: IProducto) {
+//*   return total + product.precio
+//* }, 0);
+//* arrow function
+const resultadoReduce = carrito.reduce((total, product) => total + product.precio, 0);
 console.log(resultadoReduce);
 // function(total: number, product: IProducto) {
 //   return total + product.precio
+// }
+//* function myFunction() {
+// const mivariable = "hola";
+// let numero = 14;
+// // no operaciones
+//return "retornando algo";
+//* }
+//* arrow function 
+//* 
+// (parametro, 2parametro) => {
+//   const resultado = parametro + 2parametro;
+//   // enviamos esta info a un api
+//   return resultado;
 // }
